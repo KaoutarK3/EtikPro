@@ -2,27 +2,27 @@
 
 namespace App\Repository;
 
-use App\Entity\ScenarioModel;
+use App\Entity\Scenario;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<ScenarioModel>
+ * @extends ServiceEntityRepository<Scenario>
  *
- * @method ScenarioModel|null find($id, $lockMode = null, $lockVersion = null)
- * @method ScenarioModel|null findOneBy(array $criteria, array $orderBy = null)
- * @method ScenarioModel[]    findAll()
- * @method ScenarioModel[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Scenario|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Scenario|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Scenario[]    findAll()
+ * @method Scenario[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class ScenarioModelRepository extends ServiceEntityRepository
+class ScenarioRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, ScenarioModel::class);
+        parent::__construct($registry, Scenario::class);
     }
 
 //    /**
-//     * @return ScenarioModel[] Returns an array of ScenarioModel objects
+//     * @return Scenario[] Returns an array of Scenario objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -36,7 +36,7 @@ class ScenarioModelRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?ScenarioModel
+//    public function findOneBySomeField($value): ?Scenario
 //    {
 //        return $this->createQueryBuilder('s')
 //            ->andWhere('s.exampleField = :val')

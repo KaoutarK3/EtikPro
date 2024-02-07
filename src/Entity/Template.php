@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\TemplateModelRepository;
+use App\Repository\TemplateRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: TemplateModelRepository::class)]
-class TemplateModel
+#[ORM\Entity(repositoryClass: TemplateRepository::class)]
+class Template
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]

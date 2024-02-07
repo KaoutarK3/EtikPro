@@ -2,27 +2,27 @@
 
 namespace App\Repository;
 
-use App\Entity\TemplateModel;
+use App\Entity\Template;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<TemplateModel>
+ * @extends ServiceEntityRepository<Template>
  *
- * @method TemplateModel|null find($id, $lockMode = null, $lockVersion = null)
- * @method TemplateModel|null findOneBy(array $criteria, array $orderBy = null)
- * @method TemplateModel[]    findAll()
- * @method TemplateModel[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Template|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Template|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Template[]    findAll()
+ * @method Template[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class TemplateModelRepository extends ServiceEntityRepository
+class TemplateRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, TemplateModel::class);
+        parent::__construct($registry, Template::class);
     }
 
 //    /**
-//     * @return TemplateModel[] Returns an array of TemplateModel objects
+//     * @return Template[] Returns an array of Template objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -36,7 +36,7 @@ class TemplateModelRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?TemplateModel
+//    public function findOneBySomeField($value): ?Template
 //    {
 //        return $this->createQueryBuilder('t')
 //            ->andWhere('t.exampleField = :val')

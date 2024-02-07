@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\AccountModelRepository;
+use App\Repository\AccountRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\UX\Turbo\Attribute\Broadcast;
 
-#[ORM\Entity(repositoryClass: AccountModelRepository::class)]
+#[ORM\Entity(repositoryClass: AccountRepository::class)]
 #[Broadcast]
-class AccountModel
+class Account
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]

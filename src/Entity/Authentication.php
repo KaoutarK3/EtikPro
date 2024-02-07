@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\AuthenticationModelRepository;
+use App\Repository\AuthenticationRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\UX\Turbo\Attribute\Broadcast;
 
-#[ORM\Entity(repositoryClass: AuthenticationModelRepository::class)]
+#[ORM\Entity(repositoryClass: AuthenticationRepository::class)]
 #[Broadcast]
-class AuthenticationModel
+class Authentication
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]

@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\ContactModelRepository;
+use App\Repository\ContactRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\UX\Turbo\Attribute\Broadcast;
 
-#[ORM\Entity(repositoryClass: ContactModelRepository::class)]
+#[ORM\Entity(repositoryClass: ContactRepository::class)]
 #[Broadcast]
-class ContactModel
+class Contact
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]

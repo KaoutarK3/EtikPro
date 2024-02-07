@@ -2,27 +2,27 @@
 
 namespace App\Repository;
 
-use App\Entity\AccountModel;
+use App\Entity\Authentication;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<AccountModel>
+ * @extends ServiceEntityRepository<Authentication>
  *
- * @method AccountModel|null find($id, $lockMode = null, $lockVersion = null)
- * @method AccountModel|null findOneBy(array $criteria, array $orderBy = null)
- * @method AccountModel[]    findAll()
- * @method AccountModel[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Authentication|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Authentication|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Authentication[]    findAll()
+ * @method Authentication[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class AccountModelRepository extends ServiceEntityRepository
+class AuthenticationRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, AccountModel::class);
+        parent::__construct($registry, Authentication::class);
     }
 
 //    /**
-//     * @return AccountModel[] Returns an array of AccountModel objects
+//     * @return Authentication[] Returns an array of Authentication objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -36,7 +36,7 @@ class AccountModelRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?AccountModel
+//    public function findOneBySomeField($value): ?Authentication
 //    {
 //        return $this->createQueryBuilder('a')
 //            ->andWhere('a.exampleField = :val')

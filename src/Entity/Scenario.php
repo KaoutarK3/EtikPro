@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\ScenarioModelRepository;
+use App\Repository\ScenarioRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: ScenarioModelRepository::class)]
-class ScenarioModel
+#[ORM\Entity(repositoryClass: ScenarioRepository::class)]
+class Scenario
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
